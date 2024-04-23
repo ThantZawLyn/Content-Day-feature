@@ -1,5 +1,5 @@
 # Use an official Python runtime as a parent image
-FROM mglue/content-similarity-base:v1
+FROM mglue/content-similarity-base:1.0
 
 # Set the working directory in the container
 WORKDIR /app
