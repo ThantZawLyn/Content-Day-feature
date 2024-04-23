@@ -13,7 +13,7 @@ WORKDIR /app
 
 # Copy your Python project files into the container
 #WORKDIR /app
-COPY ./app/ /app
+COPY . /app
 
 # Define the command to run your Python application
 CMD ["python", "day.py"]
