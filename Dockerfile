@@ -1,8 +1,3 @@
-# syntax=docker/dockerfile:1
-
-# Comments are provided throughout this file to help you get started.
-# If you need more help, visit the Dockerfile reference guide at
-# https://docs.docker.com/engine/reference/builder/
 # Use an official Python runtime as a parent image
 FROM mglue/content-similarity-base:v1
 
@@ -10,13 +5,15 @@ FROM mglue/content-similarity-base:v1
 WORKDIR /app
 
 # Copy the requirements file into the container
-#COPY requirements.txt .
+#COPY ./data_3000/ /app/data_3000
+#COPY ./data_today/ /app/data_today
 
 # Install Python dependencies
 #RUN pip install --no-cache-dir -r requirements.txt
 
 # Copy your Python project files into the container
-COPY . /app
+#WORKDIR /app
+COPY ./app/ /app
 
 # Define the command to run your Python application
-CMD ["python", "all-time.py"]
+CMD ["python", "day.py"]
